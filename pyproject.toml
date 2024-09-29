@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-name"
+description = "project decription"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+version = "v0.1.0"
+dependencies = [
+    "mypy",
+    "Black",
+    "Isort",
+    ]
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = []
+
+[tool.setuptools.package-data]
+
+
+[tool.mypy]
+plugins = ["sqlmypy", "pydantic.mypy"]
+
